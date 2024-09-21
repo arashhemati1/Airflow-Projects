@@ -18,24 +18,24 @@ This project demonstrates how to create an ETL (Extract, Transform, Load) pipeli
 
 The first task is to unzip the downloaded data using the `tar` command and extract it to the destination directory.
 
-    **Code:**
-    ```python
-        unzip_data = BashOperator(
-            task_id='unzip_data',
-            bash_command='tar -xvf /path/to/downloaded/data.tar -C /path/to/destination/folder'
-        )
+ **Code:**
+ ```python
+     unzip_data = BashOperator(
+         task_id='unzip_data',
+         bash_command='tar -xvf /path/to/downloaded/data.tar -C /path/to/destination/folder'
+      )
 
 ### 2. Task: `extract_data_from_csv`
 
 The second task is to extract fields (Rowid, Timestamp, Anonymized Vehicle number, and Vehicle type) from vehicle-data.csv and save them into csv_data.csv.
 
-    **Code:**
+**Code:**
 
-    ```python
-        extract_data_from_csv = BashOperator(
-            task_id='extract_data_from_csv',
-            bash_command="cut -d',' -f1,2,3,4 /path/to/vehicle-data.csv > /path/to/csv_data.csv"
-        )
+```python
+     extract_data_from_csv = BashOperator(
+         task_id='extract_data_from_csv',
+         bash_command="cut -d',' -f1,2,3,4 /path/to/vehicle-data.csv > /path/to/csv_data.csv"
+     )
 
 ### 3. Task: `extract_data_from_tsv`
 
