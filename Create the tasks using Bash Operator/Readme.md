@@ -20,11 +20,11 @@ The first task is to unzip the downloaded data using the `tar` command and extra
 
 **Code:**
 
-```python
-    unzip_data = BashOperator(
-        task_id='unzip_data',
-        bash_command='tar -xvf /path/to/downloaded/data.tar -C /path/to/destination/folder'
-    )
+    ```python
+        unzip_data = BashOperator(
+            task_id='unzip_data',
+            bash_command='tar -xvf /path/to/downloaded/data.tar -C /path/to/destination/folder'
+        )
 
 ### 2. Task: `extract_data_from_csv`
 
@@ -32,11 +32,11 @@ The second task is to extract fields (Rowid, Timestamp, Anonymized Vehicle numbe
 
 **Code:**
     
-```python
-    extract_data_from_csv = BashOperator(
-        task_id='extract_data_from_csv',
-        bash_command="cut -d',' -f1,2,3,4 /path/to/vehicle-data.csv > /path/to/csv_data.csv"
-    )
+    ```python
+        extract_data_from_csv = BashOperator(
+            task_id='extract_data_from_csv',
+            bash_command="cut -d',' -f1,2,3,4 /path/to/vehicle-data.csv > /path/to/csv_data.csv"
+        )
 
 ### 3. Task: `extract_data_from_tsv`
 
@@ -44,11 +44,11 @@ This task extracts fields (Number of axles, Tollplaza id, and Tollplaza code) fr
 
 **Code:**
 
-```python
-    extract_data_from_tsv = BashOperator(
-        task_id='extract_data_from_tsv',
-        bash_command="cut -f3,4,5 /path/to/tollplaza-data.tsv > /path/to/tsv_data.csv"
-    )
+    ```python
+        extract_data_from_tsv = BashOperator(
+            task_id='extract_data_from_tsv',
+            bash_command="cut -f3,4,5 /path/to/tollplaza-data.tsv > /path/to/tsv_data.csv"
+        )
 
 ### 4. Task: `extract_data_from_fixed_width`
 
