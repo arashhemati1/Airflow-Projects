@@ -16,3 +16,30 @@ real-time-data-pipeline/
 ├── requirements.txt                  # Python dependencies
 │
 └── README.md                         # Project description and setup instructions
+
+# Real-Time Data Pipeline
+
+This project implements a real-time data processing pipeline using Apache Kafka, Apache Airflow, Python, and NoSQL databases like Cassandra and MongoDB. It is designed to be flexible, scalable, and suitable for various applications, from e-commerce to IoT.
+
+## Features
+
+- **Real-time Data Ingestion** with Kafka
+- **Workflow Orchestration** using Airflow
+- **Data Storage** in Cassandra and MongoDB
+- **Slack Notifications** for monitoring
+- **Docker** for easy deployment
+
+## Setup Instructions
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/real-time-data-pipeline.git
+   cd real-time-data-pipeline
+
+## Install Python dependencies:
+```bash
+  pip install -r requirements.txt
+
+## Start the services using Docker Compose
+```bash
+  docker-compose up
