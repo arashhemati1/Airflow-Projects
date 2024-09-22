@@ -13,14 +13,14 @@ This project implements a real-time data processing pipeline using Apache Kafka,
 ## Setup Instructions
 
 1. Clone the repository:
-   git clone https://github.com/yourusername/real-time-data-pipeline.git
-   cd real-time-data-pipeline
+      git clone https://github.com/yourusername/real-time-data-pipeline.git
+      cd real-time-data-pipeline
 
 ## Install Python dependencies:
-   pip install -r requirements.txt
+      pip install -r requirements.txt
 
 ## Start the services using Docker Compose
-   docker-compose up
+      docker-compose up
 
 
 ```perl
